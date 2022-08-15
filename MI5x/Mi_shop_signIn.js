@@ -17,7 +17,6 @@ threads.start(function() {
         sleep(2000);
         if(tmp == '米圈点赞奖励') {
             id('com.xiaomi.shop.plugin.discovery:id/mi_circle_like_view').findOne(10000).click();
-
         }
         
         //循环返回
@@ -30,6 +29,9 @@ threads.start(function() {
                 sleep(1000);
             }
         } while (!target);
+        
+        //日志
+        log(target.text());
     }
     var str = '当前米币数量为：' + id('com.xiaomi.shop.plugin.planet:id/total_mi_gold_num_tv').findOne().text() + '个';
     shell('am force-stop com.xiaomi.shop', true);
