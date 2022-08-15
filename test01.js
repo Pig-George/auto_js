@@ -8,4 +8,4 @@
 // log(img.pixel(100, 1900) == -279288);
 
 
-log(id('com.xiaomi.shop.plugin.discovery:id/mi_circle_like_view').findOne(10000));
+id('com.xiaomi.shop.plugin.discovery:id/mi_circle_like_view').findOne(10000).click();
